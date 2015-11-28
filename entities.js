@@ -9,7 +9,9 @@ function Zombie() {
   return {
     id: parseInt(inputs[0]),
     pos: new Point(parseInt(inputs[1]), parseInt(inputs[2])),
-    dest: new Point(parseInt(inputs[3]), parseInt(inputs[4]))
+    next: new Point(parseInt(inputs[3]), parseInt(inputs[4])),
+    target: null,
+    turnToKill: null
   };
 }
 
