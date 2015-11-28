@@ -1,17 +1,21 @@
-function Zombie(){
+function Point(x, y) {
   return {
-    id: parseInt(inputs[0]),
-    posX : parseInt(inputs[1]),
-    posY : parseInt(inputs[2]),
-    destX :parseInt(inputs[3]),
-    destY : parseInt(inputs[4])
+    x: x,
+    y: y
   };
 }
 
-function Human(){
-  return{
-    id : parseInt(inputs[0]),
-    posX : parseInt(inputs[1]),
-    posY : parseInt(inputs[2])
-  };
-}
+function Zombie() {
+  return {
+    id: parseInt(inputs[0]),
+    pos: new Point(parseInt(inputs[1]), parseInt(inputs[2])),
+    dest: new Point(parseInt(inputs[3]), parseInt(inputs[4]))
+    };
+  }
+
+  function Human() {
+    return {
+      id: parseInt(inputs[0]),
+      pos: new Point(parseInt(inputs[1]), parseInt(inputs[2])),
+    };
+  }
