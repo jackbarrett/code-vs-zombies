@@ -19,5 +19,7 @@ function Human() {
   return {
     id: parseInt(inputs[0]),
     pos: new Point(parseInt(inputs[1]), parseInt(inputs[2])),
+    threats: [],
+    isDoomedIn: null
   };
 }
