@@ -3,10 +3,11 @@ function distance(p1, p2) {
 }
 
 function closest(p1, pArr) {
+  p1 = p1.pos || p1;
   var e;
   var shortest = 1000000;
   for (var i in pArr) {
-    var dist = distance(p1, pArr[i].pos) < shortest;
+    var dist = distance(p1, pArr[i].pos);
     if (dist < shortest) {
       e = pArr[i];
       shortest = dist;
